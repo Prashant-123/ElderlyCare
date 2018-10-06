@@ -16,8 +16,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.gautam.medicinetime.R;
-import com.gautam.medicinetime.report.MonthlyReportActivity;
+
+import com.elderlycare.R;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;
 
 import java.text.SimpleDateFormat;
