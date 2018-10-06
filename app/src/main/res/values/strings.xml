@@ -23,4 +23,14 @@
     <string name="no_taken_med_history">You have not taken any medicine</string>
     <string name="no_ignored_history">Well Done</string>
     <string name="menu_stats">Monthly Report</string>
+
+    <string name="medicine_alert">Medicine Alert</string>
+    <string name="health">Health and Food</string>
+    <string name="alarm">Set Alarm</string>
+    <string name="accident">Accident Alerts</string>
+    <string name="get_involved">Get Involved</string>
+    <string name="change_locale">Change Language</string>
+    <string name="daily">Daily Needs</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
 </resources>
