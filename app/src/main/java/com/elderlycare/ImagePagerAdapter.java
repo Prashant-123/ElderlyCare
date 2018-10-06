@@ -16,9 +16,9 @@ public class ImagePagerAdapter extends PagerAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
-    ArrayList<String> arrayList;
+    int[] arrayList;
 
-    public ImagePagerAdapter(Context context, ArrayList<String> arrayList) {
+    public ImagePagerAdapter(Context context, int[] arrayList) {
         this.context = context;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.arrayList = arrayList;
@@ -27,7 +27,7 @@ public class ImagePagerAdapter extends PagerAdapter {
     @Override
     public int getCount() {
         if(arrayList != null){
-            return arrayList.size();
+            return arrayList.length;
         }
         return 0;
     }
@@ -41,9 +41,9 @@ public class ImagePagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = layoutInflater.inflate(R.layout.fragment_sample, container, false);
 
-        ImageView imageView = (ImageView) itemView.findViewById(R.id.pagerImage);
+        ImageView imageView = itemView.findViewById(R.id.pagerImage);
 
-        Glide.with(context).load(arrayList.get(position))
+        Glide.with(context).load(arrayList[position])
                 .into(imageView);
 
         container.addView(itemView);

@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.smartchef.Recipes.Recipes;
-
-
 public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHolder> {
 
     private Context context;
