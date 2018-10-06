@@ -6,7 +6,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 
-import com.gautam.medicinetime.R;
+import com.elderlycare.R;
+
 
 /**
  * Created by gautam on 13/07/17.

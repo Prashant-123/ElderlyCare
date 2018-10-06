@@ -27,5 +27,6 @@ task clean(type: Delete) {
 }
 ext{
     butterKniferVersion = '8.7.0'
+    compactCalendarViewVersion = '2.0.2.1'
 
 }
