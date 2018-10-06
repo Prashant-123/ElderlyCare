@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.elderlycare.Medicine_Alert.AddMedicine;
+
 public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHolder> {
 
     private Context context;
@@ -41,10 +43,17 @@ public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHo
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, Homepage.class);
-                        intent.putExtra("activityName", text);
-                        intent.putExtra("type", holder.myTextView.getText());
-                v.getContext().startActivity(intent);
+                if(text.contains("Medicine Alert")){
+                    Intent intent = new Intent(context, AddMedicine.class);
+                    v.getContext().startActivity(intent);
+
+                }else{
+                    Intent intent = new Intent(context, Homepage.class);
+                    intent.putExtra("activityName", text);
+                    intent.putExtra("type", holder.myTextView.getText());
+                    v.getContext().startActivity(intent);
+                }
+
             }
         });
         i++;
