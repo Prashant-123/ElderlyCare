@@ -47,7 +47,17 @@ public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHo
                     Intent intent = new Intent(context, MedicineActivity.class);
                     v.getContext().startActivity(intent);
 
-                }else{
+                } else
+                if(text.contains("Daily Needs")){
+                    Intent intent = new Intent(context, DailyNeeds.class);
+                    v.getContext().startActivity(intent);
+                } else
+                if(text.contains("Health and Food")){
+                    Intent intent = new Intent(context, Food.class);
+                    v.getContext().startActivity(intent);
+
+                }
+                else{
                     Intent intent = new Intent(context, Homepage.class);
                     intent.putExtra("activityName", text);
                     intent.putExtra("type", holder.myTextView.getText());
