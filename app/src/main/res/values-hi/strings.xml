@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">"बुजुर्गों की देखभाल "</string>
+    <string name="medicine_alert">"चिकित्सा चेतावनी "</string>
+    <string name="health">"स्वास्थ्य और भोजन "</string>
+    <string name="alarm">"अलार्म सेट करो "</string>
+    <string name="accident">"दुर्घटना अलर्ट "</string>
+    <string name="daily_needs">Daily Needs</string>
+    <string name="get_involved">"उलझना "</string>
+    <string name="change_locale">"भाषा बदलो "</string>
+    <string name="hindi">हिंदी</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="daily">दैनिक जरूरतें</string>
 </resources>

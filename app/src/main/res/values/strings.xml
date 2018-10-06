@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Elderly Care</string>
+
+    <string name="medicine_alert">Medicine Alert</string>
+    <string name="health">Health and Food</string>
+    <string name="alarm">Set Alarm</string>
+    <string name="accident">Accident Alerts</string>
+    <string name="get_involved">Get Involved</string>
+    <string name="change_locale">Change Language</string>
+    <string name="daily">Daily Needs</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+
 </resources>

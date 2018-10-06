@@ -14,12 +14,12 @@ import android.widget.TextView;
 public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHolder> {
 
     private Context context;
-    private String[] mData = new String[0];
+    private int[] mData;
     private LayoutInflater mInflater;
     int i = 0;
 
 
-    HomepageAdapter(Context context, String[] data) {
+    HomepageAdapter(Context context, int[] data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -35,7 +35,7 @@ public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull final HomepageAdapter.ViewHolder holder, int position) {
 
-        final String text = mData[position];
+        final String text = holder.itemView.getResources().getString(mData[position]);
         holder.myTextView.setText(text);
         holder.imageView.setImageResource(Homepage.myImageList[i]);
         holder.card.setOnClickListener(new View.OnClickListener() {
