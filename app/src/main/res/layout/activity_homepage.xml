@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Homepage">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_frame">
 
-</android.support.constraint.ConstraintLayout>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            layout="@layout/activity_toolbar_layout" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_images"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="90dp" />
+
+        <com.bikomobile.circleindicatorpager.CircleIndicatorPager
+            android:id="@+id/circle_indicator_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="265dp"
+            app:ci_drawable="@drawable/blue_radius"
+            app:ci_drawable_unselected="@drawable/grey_radius"
+            app:ci_height="10dp"
+            app:ci_width="10dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/homePageOptionsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dp"
+            android:paddingLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/view_pager_images">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
