@@ -2,10 +2,6 @@ package com.elderlycare.Medicine_Alert;
 
 import android.support.annotation.NonNull;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class ReminderPresenter implements ReminderContract.Presenter {
 
     private final MedicineRepository mMedicineRepository;

@@ -138,7 +138,6 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
 
     @Override
     public void showEmptyMedicineError() {
-        // Snackbar.make(mTitle, getString(R.string.empty_task_message), Snackbar.LENGTH_LONG).show();
     }
 
     @Override
@@ -164,7 +163,6 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
     public void onCheckboxClicked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
 
-        /** Checking which checkbox was clicked */
         switch (view.getId()) {
             case R.id.dv_monday:
                 if (checked) {
@@ -250,7 +248,7 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
                 minute = selectedMinute;
                 tvMedicineTime.setText(String.format(Locale.getDefault(), "%d:%d", selectedHour, selectedMinute));
             }
-        }, hour, minute, false);//No 24 hour time
+        }, hour, minute, false);
         mTimePicker.setTitle("Select Time");
         mTimePicker.show();
     }
@@ -292,10 +290,8 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
             Date date = takeTime.getTime();
             String dateString = new SimpleDateFormat("MMM d, yyyy", Locale.getDefault()).format(date);
 
-            /** Updating model */
             MedicineAlarm alarm = new MedicineAlarm();
 
-            /** If Pill does not already exist */
             if (!mPresenter.isMedicineExits(pill_name)) {
                 Pills pill = new Pills();
                 pill.setPillName(pill_name);
@@ -310,7 +306,7 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
                 long pillId = mPresenter.addPills(pill);
                 pill.setPillId(pillId);
                 mPresenter.saveMedicine(alarm, pill);
-            } else { // If Pill already exists
+            } else {
                 Pills pill = mPresenter.getPillsByName(pill_name);
                 alarm.setDateString(dateString);
                 alarm.setHour(hour);
@@ -344,16 +340,13 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
                     int id = (int) _id;
                     checkBoxCounter++;
 
-                    /** This intent invokes the activity ReminderActivity, which in turn opens the AlertAlarm window */
                     Intent intent = new Intent(getActivity(), ReminderActivity.class);
                     intent.putExtra(ReminderFragment.EXTRA_ID, _id);
 
                     operation = PendingIntent.getActivity(getActivity(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                    /** Getting a reference to the System Service ALARM_SERVICE */
                     alarmManager = (AlarmManager) getActivity().getSystemService(ALARM_SERVICE);
 
-                    /** Creating a calendar object corresponding to the date and time set by the user */
                     Calendar calendar = Calendar.getInstance();
 
                     calendar.set(Calendar.HOUR_OF_DAY, hour);
@@ -362,7 +355,6 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
                     calendar.set(Calendar.MILLISECOND, 0);
                     calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
 
-                    /** Converting the date and time in to milliseconds elapsed since epoch */
                     long alarm_time = calendar.getTimeInMillis();
 
                     if (calendar.before(Calendar.getInstance()))

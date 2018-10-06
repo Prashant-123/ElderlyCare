@@ -14,10 +14,8 @@ public class FontUtil {
     public static final String ROBOTO_BOLD = "fonts/Roboto-Bold.ttf";
 
 
-    // Constructor
     private FontUtil() { }
 
-    // Cache fonts in hash table
     private static Hashtable<String, Typeface> fontCache = new Hashtable<String, Typeface>();
     public static Typeface getTypeface(String name) {
         Typeface tf = fontCache.get(name);

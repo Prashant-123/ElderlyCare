@@ -1,9 +1,5 @@
 package com.elderlycare.Medicine_Alert;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public enum  FilterType {
 
     ALL_MEDICINES,

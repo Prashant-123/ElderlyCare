@@ -7,10 +7,6 @@ import android.support.annotation.NonNull;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class MedicinePresenter implements MedicineContract.Presenter {
 
     private final MedicineRepository mMedicineRepository;

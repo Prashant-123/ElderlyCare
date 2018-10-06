@@ -114,21 +114,21 @@ public class MedicineActivity extends AppCompatActivity {
         //Create MedicinePresenter
         presenter = new MedicinePresenter(Injection.provideMedicineRepository(MedicineActivity.this), medicineFragment);
     }
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.medicine_menu, menu);
+//        return true;
+//    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.medicine_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_stats) {
-            Intent intent = new Intent(this, MonthlyReportActivity.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (item.getItemId() == R.id.menu_stats) {
+//            Intent intent = new Intent(this, MonthlyReportActivity.class);
+//            startActivity(intent);
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     public void setCurrentDate(Date date) {
         setSubtitle(dateFormat.format(date));

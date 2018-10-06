@@ -2,10 +2,6 @@ package com.elderlycare.Medicine_Alert;
 
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public interface MedicineContract {
 
     interface View extends BaseView<Presenter>{

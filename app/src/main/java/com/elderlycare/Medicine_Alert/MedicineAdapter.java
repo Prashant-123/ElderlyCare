@@ -13,10 +13,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> {
 
     private List<MedicineAlarm> medicineAlarmList;

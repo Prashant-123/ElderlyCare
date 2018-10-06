@@ -5,10 +5,6 @@ import android.support.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class MonthlyReportPresenter implements MonthlyReportContract.Presenter {
 
 

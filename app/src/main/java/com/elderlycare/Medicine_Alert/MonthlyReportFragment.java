@@ -26,11 +26,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class MonthlyReportFragment extends Fragment implements MonthlyReportContract.View {
 
     @BindView(R.id.rv_history_list)

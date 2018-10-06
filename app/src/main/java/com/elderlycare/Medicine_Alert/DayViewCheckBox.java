@@ -9,9 +9,6 @@ import android.util.AttributeSet;
 import com.elderlycare.R;
 
 
-/**
- * Created by gautam on 13/07/17.
- */
 
 public class DayViewCheckBox extends AppCompatCheckBox {
 

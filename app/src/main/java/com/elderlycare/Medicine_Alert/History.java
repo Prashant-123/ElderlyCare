@@ -2,9 +2,6 @@ package com.elderlycare.Medicine_Alert;
 
 import java.util.Locale;
 
-/**
- * Created by gautam on 13/07/17.
- */
 
 public class History {
 

@@ -7,15 +7,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by gautam on 12/07/17.
- */
+
 
 public class MedicineAlarm implements Comparable<MedicineAlarm> {
 
-    private long id;  // DB id number
+    private long id;
 
-    private int hour; //
+    private int hour;
 
     private int minute;
 
@@ -141,10 +139,7 @@ public class MedicineAlarm implements Comparable<MedicineAlarm> {
         }
     }
 
-    /**
-     * A helper method which returns the time of the alarm in string form
-     * hour:minutes am/pm
-     */
+
     public String getStringTime() {
         int nonMilitaryHour = hour % 12;
         if (nonMilitaryHour == 0)
@@ -155,10 +150,7 @@ public class MedicineAlarm implements Comparable<MedicineAlarm> {
         return String.format(Locale.getDefault(), "%d:%s %s", nonMilitaryHour, min, getAm_pm());
     }
 
-    /**
-     * A helper method which returns the formatted medicine dose
-     * doseQuantity doseUnit
-     */
+
     public String getFormattedDose() {
         return String.format(Locale.getDefault(), "%s %s", doseQuantity, doseUnit);
     }

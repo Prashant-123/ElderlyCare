@@ -27,10 +27,6 @@ import butterknife.Unbinder;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class ReminderFragment extends Fragment implements ReminderContract.View {
 
     public static final String EXTRA_ID = "extra_id";

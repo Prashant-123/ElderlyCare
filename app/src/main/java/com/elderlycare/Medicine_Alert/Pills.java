@@ -4,10 +4,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by gautam on 13/07/17.
- */
-
 public class Pills {
 
     private String pillName;
@@ -29,11 +25,7 @@ public class Pills {
 
     public void setPillName(String pillName) { this.pillName = pillName; }
 
-    /**
-     *
-     * @param medicineAlarm
-     * allows a new medicineAlarm sto be added to a preexisting medicineAlarm
-     */
+
     public void addAlarm(MedicineAlarm medicineAlarm) {
         medicineAlarms.add(medicineAlarm);
         Collections.sort(medicineAlarms);
