@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.elderlycare.Medicine_Alert.AddMedicine;
+import com.elderlycare.Medicine_Alert.MedicineActivity;
 
 public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHolder> {
 
@@ -44,7 +44,7 @@ public class HomepageAdapter extends RecyclerView.Adapter<HomepageAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 if(text.contains("Medicine Alert")){
-                    Intent intent = new Intent(context, AddMedicine.class);
+                    Intent intent = new Intent(context, MedicineActivity.class);
                     v.getContext().startActivity(intent);
 
                 }else{

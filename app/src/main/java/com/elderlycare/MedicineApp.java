@@ -1,14 +1,9 @@
-package com.elderlycare.Medicine_Alert;
+package com.elderlycare;
 
 import android.app.Application;
 import android.content.Context;
 
-/**
- * Created by gautam on 12/07/17.
- */
-
 public class MedicineApp extends Application {
-
     private static Context mInstance;
 
 

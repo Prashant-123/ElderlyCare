@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.elderlycare">
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -24,6 +25,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".Medicine_Alert.AddMedicine"></activity>
+        <activity android:name=".Medicine_Alert.MedicineActivity"></activity>
     </application>
 
 </manifest>

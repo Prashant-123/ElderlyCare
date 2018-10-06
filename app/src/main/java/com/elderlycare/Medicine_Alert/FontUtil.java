@@ -3,6 +3,8 @@ package com.elderlycare.Medicine_Alert;
 import android.graphics.Typeface;
 
 
+import com.elderlycare.MedicineApp;
+
 import java.util.Hashtable;
 
 public class FontUtil {
